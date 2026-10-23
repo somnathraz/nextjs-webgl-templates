@@ -1,0 +1,2056 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+.theme-offday {
+  --paper: #f5eddb;
+  --ink: #2b2c22;
+  --orange: #ed683e;
+  --line: #d9d2c0;
+}
+
+.theme-offday * {
+  box-sizing: border-box;
+}
+
+.theme-offday {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+}
+
+.theme-offday {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'DM Sans', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.theme-offday button, .theme-offday input {
+  font: inherit;
+}
+
+.theme-offday button, .theme-offday a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.theme-offday button {
+  cursor: pointer;
+  color: inherit;
+}
+
+.theme-offday a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.theme-offday button:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.theme-offday a:focus-visible, .theme-offday button:focus-visible, .theme-offday summary:focus-visible, .theme-offday [tabindex]:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 5px;
+}
+
+.theme-offday button {
+  border: 0;
+}
+
+.theme-offday ::selection {
+  background: #253d26;
+  color: #fff4dc;
+}
+
+.theme-offday .eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+.theme-offday .site-header {
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 10;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 4%;
+  border-bottom: 1px solid #fff1d74d;
+  color: var(--paper);
+}
+
+.theme-offday .wordmark {
+  font-size: 43px;
+  font-weight: 700;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+
+.theme-offday .wordmark span {
+  font-size: 12px;
+  vertical-align: top;
+  letter-spacing: 0;
+  margin: 6px 0 0 5px;
+  display: inline-block;
+}
+
+.theme-offday .site-header nav {
+  display: flex;
+  gap: 32px;
+  font-size: 11px;
+}
+
+.theme-offday .site-header nav a:hover {
+  opacity: 0.7;
+}
+
+.theme-offday .header-actions {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+.theme-offday .header-shop {
+  font-size: 11px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+.theme-offday .bag-button {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  background: transparent;
+  color: var(--paper);
+  font-size: 10px;
+  border-left: 1px solid #fff2dd66;
+  padding-left: 20px;
+}
+
+.theme-offday .hero {
+  height: 100svh;
+  min-height: 740px;
+  max-height: 1100px;
+  position: relative;
+  overflow: hidden;
+  color: var(--paper);
+  transition: background-color 0.65s;
+}
+
+.theme-offday .hero-topline {
+  position: absolute;
+  top: 121px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  z-index: 3;
+}
+
+.theme-offday .hero h1 {
+  font-family: 'Barlow Condensed', 'Arial Narrow', Impact, sans-serif;
+  font-weight: 800;
+  font-size: clamp(140px, 20.8vw, 330px);
+  line-height: 0.76;
+  letter-spacing: -0.02em;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: 21%;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.theme-offday .hero h1 span {
+  display: block;
+}
+
+.theme-offday .hero h1 span:first-child {
+  padding-right: 15%;
+}
+
+.theme-offday .hero h1 span:last-child {
+  padding-left: 7%;
+  margin-top: 18px;
+}
+
+.theme-offday .hero-can {
+  position: absolute;
+  inset: 16% 29% 12%;
+  z-index: 2;
+  filter: drop-shadow(24px 24px 17px #5d2b242b);
+}
+
+.theme-offday .can-scene {
+  height: 100%;
+  width: 100%;
+}
+
+.theme-offday .can-scene canvas {
+  display: block;
+  touch-action: pan-y;
+}
+
+.theme-offday .can-interactive {
+  cursor: grab;
+  touch-action: pan-y;
+}
+
+.theme-offday .can-interactive:active {
+  cursor: grabbing;
+}
+
+.theme-offday .hero-side {
+  position: absolute;
+  left: 5%;
+  top: 48%;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  font-size: 12px;
+  line-height: 1.6;
+  z-index: 3;
+}
+
+.theme-offday .hero-side p {
+  margin: 0;
+}
+
+.theme-offday .tiny-plus {
+  font-size: 24px;
+  line-height: 1;
+}
+
+.theme-offday .hero-stamp {
+  position: absolute;
+  right: 9%;
+  top: 25%;
+  width: 112px;
+  height: 112px;
+  transform: rotate(12deg);
+  color: var(--paper);
+}
+
+.theme-offday .hero-stamp svg {
+  width: 100%;
+  height: 100%;
+  fill: var(--paper);
+}
+
+.theme-offday .hero-stamp svg circle {
+  fill: var(--paper);
+}
+
+.theme-offday .hero-stamp > span {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #c74b2e;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.theme-offday .hero-flavor {
+  position: absolute;
+  left: 4%;
+  bottom: 100px;
+  z-index: 3;
+}
+
+.theme-offday .hero-flavor > .eyebrow {
+  font-size: 7px;
+  display: block;
+  opacity: 0.8;
+}
+
+.theme-offday .hero-flavor > strong {
+  display: block;
+  margin: 7px 0 15px;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+}
+
+.theme-offday .flavor-dots {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-offday .flavor-dots button {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.theme-offday .flavor-dots button[aria-pressed='true']:after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border: 1px solid var(--paper);
+  border-radius: 50%;
+}
+
+.theme-offday .hero-cta {
+  position: absolute;
+  right: 4%;
+  bottom: 96px;
+  z-index: 3;
+}
+
+.theme-offday .hero-cta p {
+  font-size: 11px;
+  line-height: 1.7;
+  max-width: 210px;
+  margin: 0 0 18px;
+}
+
+.theme-offday .button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 17px 22px;
+  border-radius: 3px;
+  font-size: 11px;
+  font-weight: 500;
+  transition:
+    transform 0.25s,
+    background 0.25s;
+}
+
+.theme-offday .button:hover {
+  transform: translateY(-3px);
+}
+
+.theme-offday .button-cream {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.theme-offday .button-ink {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.theme-offday .button-ink:hover {
+  background: #424535;
+}
+
+.theme-offday .hero-bottom {
+  position: absolute;
+  bottom: 24px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 7px;
+  letter-spacing: 1.2px;
+  font-weight: 500;
+}
+
+.theme-offday .hero-bottom a, .theme-offday .hero-bottom span {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.theme-offday .hero-bottom > span:nth-child(2) {
+  opacity: 0.8;
+}
+
+.theme-offday .ticker {
+  background: var(--ink);
+  color: var(--paper);
+  height: 73px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.theme-offday .ticker > div {
+  white-space: nowrap;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 37px;
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  word-spacing: 10px;
+  animation: ticker 28s linear infinite;
+}
+
+.theme-offday .ticker span {
+  color: #ee744d;
+  padding: 0 35px;
+  font-size: 43px;
+}
+
+@keyframes ticker {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.theme-offday .story {
+  height: 270svh;
+}
+
+.theme-offday .story-sticky {
+  height: 100svh;
+  min-height: 650px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding: 8% 7%;
+}
+
+.theme-offday .story-copy {
+  width: 45%;
+  position: relative;
+  z-index: 3;
+}
+
+.theme-offday .story-copy > .eyebrow {
+  font-size: 9px;
+  margin-bottom: 45px;
+}
+
+.theme-offday .story-text {
+  min-height: 340px;
+}
+
+.theme-offday .story-text h2 {
+  white-space: pre-line;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(65px, 8.5vw, 132px);
+  font-weight: 800;
+  letter-spacing: -2px;
+  line-height: 0.9;
+  margin: 0 0 28px;
+}
+
+.theme-offday .story-text p {
+  font-size: 13px;
+  line-height: 1.9;
+  max-width: 280px;
+  color: #6c6e60;
+  margin: 0;
+}
+
+.theme-offday .story-progress {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  max-width: 250px;
+  margin-top: 30px;
+}
+
+.theme-offday .story-progress > span {
+  width: 35px;
+  height: 3px;
+  background: #d7d1bf;
+}
+
+.theme-offday .story-progress > span.active {
+  background: var(--orange);
+}
+
+.theme-offday .story-progress small {
+  width: 100%;
+  font-size: 7px;
+  letter-spacing: 1px;
+  margin-top: 8px;
+}
+
+.theme-offday .story-visual {
+  position: absolute;
+  left: 47%;
+  right: 0;
+  top: 5%;
+  bottom: 5%;
+}
+
+.theme-offday .story-visual .can-scene {
+  position: relative;
+  z-index: 2;
+}
+
+.theme-offday .story-orbit {
+  position: absolute;
+  top: 22%;
+  left: 14%;
+  width: 70%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 1px solid #d6cfbb;
+}
+
+.theme-offday .story-orbit:after {
+  content: '';
+  position: absolute;
+  inset: 12%;
+  border: 1px solid #d6cfbb;
+  border-radius: 50%;
+}
+
+.theme-offday .story-note {
+  position: absolute;
+  bottom: 13%;
+  right: 15%;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  z-index: 3;
+  transform: rotate(-8deg);
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 24px;
+}
+
+.theme-offday .story-note svg {
+  width: 45px;
+  color: var(--orange);
+}
+
+.theme-offday .story-footnote {
+  position: absolute;
+  left: 7%;
+  bottom: 28px;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: #8d8e7f;
+}
+
+.theme-offday .lifestyle {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  min-height: 690px;
+  background: #dfdcc6;
+}
+
+.theme-offday .lifestyle-image {
+  position: relative;
+  min-height: 600px;
+  overflow: hidden;
+}
+
+.theme-offday .lifestyle-image img {
+  object-fit: cover;
+}
+
+.theme-offday .lifestyle-image > span {
+  position: absolute;
+  bottom: 30px;
+  left: 35px;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: white;
+  z-index: 2;
+  text-shadow: 0 1px 6px #372e25;
+}
+
+.theme-offday .lifestyle-copy {
+  padding: 75px 13%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.theme-offday .lifestyle-copy > svg {
+  width: 51px;
+  color: #6f7e42;
+  margin-bottom: 27px;
+}
+
+.theme-offday .lifestyle-copy > .eyebrow {
+  font-size: 8px;
+  margin-bottom: 25px;
+}
+
+.theme-offday .lifestyle-copy h2 {
+  font-size: clamp(36px, 4.5vw, 66px);
+  line-height: 1.05;
+  letter-spacing: -3px;
+  font-weight: 500;
+  margin: 0 0 27px;
+}
+
+.theme-offday .lifestyle-copy em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+
+.theme-offday .lifestyle-copy p:not(.eyebrow) {
+  font-size: 12px;
+  line-height: 1.9;
+  color: #6a705b;
+  max-width: 280px;
+}
+
+.theme-offday .text-link {
+  margin-top: 27px;
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 12px;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 270px;
+}
+
+.theme-offday .shop {
+  padding: 110px 7% 100px;
+}
+
+.theme-offday .shop-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 65px;
+}
+
+.theme-offday .shop-heading > .eyebrow {
+  font-size: 9px;
+  margin-top: 8px;
+}
+
+.theme-offday .shop-heading h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(50px, 6vw, 90px);
+  font-weight: 800;
+  letter-spacing: -1px;
+  line-height: 0.95;
+  margin: 0;
+  width: 60%;
+}
+
+.theme-offday .shop-heading h2 span {
+  color: #92937e;
+}
+
+.theme-offday .shop-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 9%;
+}
+
+.theme-offday .shop-visual {
+  min-height: 565px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.6s;
+}
+
+.theme-offday .shop-visual .can-scene {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.theme-offday .shop-index {
+  position: absolute;
+  left: 23px;
+  top: 25px;
+  font-size: 10px;
+  color: var(--paper);
+  z-index: 3;
+}
+
+.theme-offday .shop-backtext {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 205px;
+  line-height: 0.8;
+  font-weight: 800;
+  color: var(--paper);
+  opacity: 0.28;
+  letter-spacing: -5px;
+  white-space: pre-line;
+}
+
+.theme-offday .rotate-hint {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  z-index: 3;
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: var(--paper);
+}
+
+.theme-offday .shop-options {
+  align-self: center;
+}
+
+.theme-offday .shop-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.theme-offday .shop-title h3 {
+  font-size: 29px;
+  font-weight: 500;
+  letter-spacing: -1px;
+  margin: 0;
+}
+
+.theme-offday .shop-title > span {
+  font-size: 23px;
+}
+
+.theme-offday .shop-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #727566;
+  margin: 16px 0 30px;
+}
+
+.theme-offday .flavor-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-top: 1px solid var(--line);
+}
+
+.theme-offday .flavor-options button {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  padding: 17px 0;
+  font-size: 12px;
+  text-align: left;
+  transition:
+    padding 0.2s,
+    background 0.2s;
+}
+
+.theme-offday .flavor-options button[aria-pressed='true'] {
+  background: #e7e2ce;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.theme-offday .flavor-options button > i {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+
+.theme-offday .flavor-options button > span:last-child {
+  margin-left: auto;
+  font-size: 8px;
+  opacity: 0.5;
+}
+
+.theme-offday .shop-pack {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin: 30px 0 23px;
+}
+
+.theme-offday .shop-pack > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.theme-offday .shop-pack strong {
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.theme-offday .shop-pack span {
+  font-size: 9px;
+  color: #767969;
+}
+
+.theme-offday .quantity {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc8b6;
+  flex-shrink: 0;
+  height: 37px;
+}
+
+.theme-offday .quantity button {
+  background: transparent;
+  padding: 8px 10px;
+  display: grid;
+  place-items: center;
+}
+
+.theme-offday .quantity > span {
+  width: 24px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.theme-offday .add-button {
+  width: 100%;
+  font-size: 10px;
+  gap: 12px;
+}
+
+.theme-offday .shop-caption {
+  font-size: 8px;
+  color: #858774;
+  text-align: center;
+  margin: 14px 0 25px;
+}
+
+.theme-offday .product-details {
+  border-top: 1px solid var(--line);
+  font-size: 10px;
+  padding: 14px 0;
+}
+
+.theme-offday .product-details summary {
+  cursor: pointer;
+}
+
+.theme-offday .product-details p {
+  font-size: 11px;
+  line-height: 1.8;
+  color: #767969;
+  margin-bottom: 0;
+}
+
+.theme-offday .footer {
+  background: var(--orange);
+  color: var(--paper);
+  padding: 55px 5% 25px;
+  overflow: hidden;
+}
+
+.theme-offday .footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-offday .footer-top > p {
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.5px;
+}
+
+.theme-offday .footer-top > a {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-size: 9px;
+  letter-spacing: 1px;
+}
+
+.theme-offday .footer-wordmark {
+  display: block;
+  font-size: clamp(100px, 28vw, 440px);
+  font-weight: 700;
+  letter-spacing: -0.085em;
+  line-height: 1;
+  margin: 10px 0 30px;
+  position: relative;
+}
+
+.theme-offday .footer-wordmark span {
+  font-size: 30px;
+  vertical-align: top;
+  letter-spacing: 0;
+  display: inline-block;
+  margin-top: 55px;
+}
+
+.theme-offday .footer-bottom {
+  border-top: 1px solid #f5eddb55;
+  padding-top: 23px;
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  font-size: 7px;
+  letter-spacing: 0.7px;
+}
+
+.theme-offday .bag-dialog {
+  position: fixed;
+  inset: 0 0 0 auto;
+  margin: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 480px;
+  max-width: 100%;
+  border: 0;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 30px 35px;
+  overflow-y: auto;
+}
+
+.theme-offday .bag-dialog::backdrop {
+  background: #24271c88;
+  backdrop-filter: blur(6px);
+}
+
+.theme-offday .bag-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.theme-offday .bag-top .eyebrow {
+  font-size: 8px;
+}
+
+.theme-offday .icon-button {
+  padding: 4px;
+  background: transparent;
+  display: grid;
+  place-items: center;
+}
+
+.theme-offday .bag-dialog h2 {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: 70px;
+  line-height: 0.9;
+  text-transform: uppercase;
+  margin: 36px 0;
+}
+
+.theme-offday .empty-bag {
+  padding: 35px 0;
+}
+
+.theme-offday .empty-bag p {
+  font-size: 13px;
+  margin: 25px 0;
+}
+
+.theme-offday .bag-items {
+  border-top: 1px solid var(--line);
+}
+
+.theme-offday .bag-item {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  padding: 25px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.theme-offday .mini-can {
+  width: 43px;
+  height: 76px;
+  border-radius: 8px;
+  border-block: 4px solid #b7b9ae;
+  writing-mode: vertical-rl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.theme-offday .bag-item > div {
+  flex: 1;
+}
+
+.theme-offday .bag-item h3 {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 7px;
+}
+
+.theme-offday .bag-item p {
+  font-size: 9px;
+  color: #7d806e;
+  margin: 0 0 12px;
+}
+
+.theme-offday .bag-item > strong {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.theme-offday .quantity.small {
+  width: 90px;
+  height: 27px;
+}
+
+.theme-offday .quantity.small button {
+  padding: 5px;
+}
+
+.theme-offday .quantity.small span {
+  flex: 1;
+  font-size: 10px;
+}
+
+.theme-offday .bag-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+  font-size: 13px;
+}
+
+.theme-offday .bag-total strong {
+  font-size: 23px;
+}
+
+.theme-offday .bag-dialog > .button {
+  width: 100%;
+}
+
+.theme-offday .fine-print {
+  font-size: 10px;
+  color: #858774;
+  line-height: 1.8;
+}
+
+.theme-offday .bag-message {
+  font-size: 12px;
+  line-height: 1.7;
+  color: #526738;
+}
+
+.theme-offday .can-fallback {
+  width: 160px;
+  height: 330px;
+  position: relative;
+  top: 15%;
+  margin: auto;
+  border-radius: 25px;
+  border-block: 9px solid #b7bbae;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  transform: rotate(-10deg);
+}
+
+.theme-offday .can-fallback b {
+  font-size: 35px;
+  writing-mode: vertical-rl;
+}
+
+.theme-offday .can-fallback span {
+  font-size: 11px;
+}
+
+.theme-offday .can-fallback small {
+  font-size: 7px;
+}
+
+.theme-offday .skip-link {
+  position: fixed;
+  top: -60px;
+  left: 15px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 15px;
+  z-index: 100;
+}
+
+.theme-offday .skip-link:focus {
+  top: 15px;
+}
+
+@media (min-width: 1600px) {
+.theme-offday .hero-can {
+    inset: 14% 31% 11%;
+  }
+
+.theme-offday .hero h1 {
+    top: 20%;
+  }
+
+.theme-offday .hero-side {
+    left: 7%;
+  }
+
+.theme-offday .hero-cta {
+    right: 7%;
+  }
+
+.theme-offday .hero-flavor {
+    left: 7%;
+  }
+
+}
+
+@media (max-width: 1000px) {
+.theme-offday .hero h1 {
+    font-size: 23vw;
+    top: 25%;
+  }
+
+.theme-offday .hero-can {
+    inset: 18% 20% 16%;
+  }
+
+.theme-offday .hero-side {
+    font-size: 10px;
+    top: 43%;
+    left: 4%;
+  }
+
+.theme-offday .hero-stamp {
+    right: 5%;
+    top: 23%;
+    width: 85px;
+    height: 85px;
+  }
+
+.theme-offday .hero-stamp > span {
+    font-size: 16px;
+  }
+
+.theme-offday .hero-cta p {
+    font-size: 10px;
+  }
+
+.theme-offday .hero-cta .button {
+    font-size: 10px;
+    padding: 15px;
+    gap: 15px;
+  }
+
+.theme-offday .story-copy {
+    width: 48%;
+  }
+
+.theme-offday .story-text h2 {
+    font-size: 85px;
+  }
+
+.theme-offday .story-visual {
+    left: 43%;
+    right: -5%;
+  }
+
+.theme-offday .lifestyle-copy {
+    padding: 55px 10%;
+  }
+
+.theme-offday .lifestyle-copy h2 {
+    font-size: 43px;
+    letter-spacing: -2px;
+  }
+
+.theme-offday .lifestyle {
+    min-height: 600px;
+  }
+
+.theme-offday .shop {
+    padding: 80px 5%;
+  }
+
+.theme-offday .shop-grid {
+    gap: 6%;
+  }
+
+.theme-offday .shop-visual {
+    min-height: 540px;
+  }
+
+.theme-offday .shop-title h3 {
+    font-size: 23px;
+  }
+
+.theme-offday .shop-backtext {
+    font-size: 165px;
+  }
+
+.theme-offday .footer-wordmark span {
+    margin-top: 35px;
+  }
+
+}
+
+@media (max-width: 650px) {
+.theme-offday .site-header {
+    height: 76px;
+    margin: 0 6%;
+  }
+
+.theme-offday .wordmark {
+    font-size: 35px;
+    letter-spacing: -2.5px;
+  }
+
+.theme-offday .site-header nav {
+    display: none;
+  }
+
+.theme-offday .header-actions {
+    gap: 13px;
+  }
+
+.theme-offday .header-shop {
+    font-size: 9px;
+    gap: 10px;
+  }
+
+.theme-offday .bag-button {
+    padding-left: 12px;
+    gap: 6px;
+  }
+
+.theme-offday .hero {
+    height: 100svh;
+    min-height: 740px;
+    max-height: 950px;
+  }
+
+.theme-offday .hero-topline {
+    top: 104px;
+    left: 6%;
+    right: 6%;
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+
+.theme-offday .hero-topline > span:last-child {
+    display: none;
+  }
+
+.theme-offday .hero h1 {
+    font-size: 29vw;
+    line-height: 0.82;
+    top: 23%;
+    z-index: 1;
+  }
+
+.theme-offday .hero h1 span:first-child {
+    padding-right: 15%;
+  }
+
+.theme-offday .hero h1 span:last-child {
+    padding-left: 0;
+    margin-top: 17px;
+  }
+
+.theme-offday .hero-can {
+    inset: 20% 2% 20%;
+    z-index: 2;
+    filter: drop-shadow(15px 20px 14px #5d2b2422);
+  }
+
+.theme-offday .hero-side {
+    top: 15%;
+    left: 6%;
+    font-size: 9px;
+    gap: 9px;
+  }
+
+.theme-offday .tiny-plus {
+    font-size: 17px;
+  }
+
+.theme-offday .hero-stamp {
+    width: 70px;
+    height: 70px;
+    right: 7%;
+    top: 16%;
+  }
+
+.theme-offday .hero-stamp > span {
+    font-size: 13px;
+  }
+
+.theme-offday .hero-flavor {
+    left: 6%;
+    bottom: 130px;
+  }
+
+.theme-offday .hero-flavor > .eyebrow {
+    font-size: 6px;
+  }
+
+.theme-offday .hero-flavor > strong {
+    font-size: 15px;
+    margin: 5px 0 12px;
+  }
+
+.theme-offday .flavor-dots {
+    gap: 11px;
+  }
+
+.theme-offday .flavor-dots button {
+    width: 13px;
+    height: 13px;
+  }
+
+.theme-offday .hero-cta {
+    right: 6%;
+    left: 6%;
+    bottom: 61px;
+  }
+
+.theme-offday .hero-cta p {
+    position: absolute;
+    right: 0;
+    bottom: 70px;
+    font-size: 9px;
+    text-align: right;
+    max-width: 135px;
+  }
+
+.theme-offday .hero-cta .button {
+    width: 100%;
+    padding: 16px;
+    font-size: 11px;
+  }
+
+.theme-offday .hero-bottom {
+    bottom: 21px;
+    left: 6%;
+    right: 6%;
+    font-size: 6px;
+    letter-spacing: 0.6px;
+  }
+
+.theme-offday .hero-bottom > span:last-child {
+    display: none;
+  }
+
+.theme-offday .hero-bottom a {
+    gap: 7px;
+  }
+
+.theme-offday .hero-bottom > span:nth-child(2) {
+    gap: 6px;
+  }
+
+.theme-offday .ticker {
+    height: 58px;
+  }
+
+.theme-offday .ticker > div {
+    font-size: 28px;
+  }
+
+.theme-offday .ticker span {
+    font-size: 29px;
+    padding: 0 15px;
+  }
+
+.theme-offday .story {
+    height: 300svh;
+  }
+
+.theme-offday .story-sticky {
+    min-height: 700px;
+    padding: 42px 7%;
+    display: block;
+  }
+
+.theme-offday .story-copy {
+    width: 100%;
+  }
+
+.theme-offday .story-copy > .eyebrow {
+    font-size: 7px;
+    margin: 0 0 25px;
+  }
+
+.theme-offday .story-text {
+    min-height: 245px;
+  }
+
+.theme-offday .story-text h2 {
+    font-size: 65px;
+    letter-spacing: -1px;
+    line-height: 0.88;
+    margin-bottom: 16px;
+  }
+
+.theme-offday .story-text p {
+    font-size: 11px;
+    line-height: 1.8;
+    max-width: 255px;
+  }
+
+.theme-offday .story-progress {
+    margin-top: 10px;
+  }
+
+.theme-offday .story-progress small {
+    font-size: 6px;
+    margin-top: 3px;
+  }
+
+.theme-offday .story-visual {
+    top: 350px;
+    left: 15%;
+    right: -13%;
+    bottom: 38px;
+  }
+
+.theme-offday .story-orbit {
+    top: 12%;
+    left: 15%;
+    width: 65%;
+  }
+
+.theme-offday .story-note {
+    right: 15%;
+    bottom: 7%;
+    font-size: 18px;
+    gap: 8px;
+  }
+
+.theme-offday .story-note svg {
+    width: 29px;
+  }
+
+.theme-offday .story-footnote {
+    font-size: 6px;
+    bottom: 18px;
+    left: 7%;
+    max-width: 140px;
+    line-height: 1.6;
+  }
+
+.theme-offday .lifestyle {
+    grid-template-columns: 1fr;
+  }
+
+.theme-offday .lifestyle-image {
+    min-height: 420px;
+  }
+
+.theme-offday .lifestyle-image > span {
+    left: 23px;
+    bottom: 23px;
+    font-size: 6px;
+  }
+
+.theme-offday .lifestyle-copy {
+    padding: 45px 8% 55px;
+  }
+
+.theme-offday .lifestyle-copy h2 {
+    font-size: 48px;
+    letter-spacing: -2.5px;
+  }
+
+.theme-offday .lifestyle-copy > svg {
+    width: 40px;
+    margin-bottom: 18px;
+  }
+
+.theme-offday .lifestyle-copy > .eyebrow {
+    margin-bottom: 20px;
+  }
+
+.theme-offday .lifestyle-copy p:not(.eyebrow) {
+    max-width: 100%;
+  }
+
+.theme-offday .text-link {
+    max-width: none;
+  }
+
+.theme-offday .shop {
+    padding: 65px 6%;
+  }
+
+.theme-offday .shop-heading {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+.theme-offday .shop-heading > .eyebrow {
+    font-size: 8px;
+    margin-bottom: 22px;
+  }
+
+.theme-offday .shop-heading h2 {
+    font-size: 49px;
+    width: 100%;
+    letter-spacing: -0.7px;
+  }
+
+.theme-offday .shop-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+.theme-offday .shop-visual {
+    min-height: 455px;
+  }
+
+.theme-offday .shop-backtext {
+    font-size: 170px;
+  }
+
+.theme-offday .shop-title h3 {
+    font-size: 27px;
+  }
+
+.theme-offday .shop-note {
+    margin-top: 12px;
+  }
+
+.theme-offday .shop-caption {
+    font-size: 7px;
+  }
+
+.theme-offday .add-button {
+    font-size: 10px;
+    padding: 16px;
+  }
+
+.theme-offday .footer {
+    padding: 35px 6% 22px;
+  }
+
+.theme-offday .footer-top > p {
+    font-size: 10px;
+  }
+
+.theme-offday .footer-top > a {
+    font-size: 7px;
+    gap: 12px;
+  }
+
+.theme-offday .footer-wordmark {
+    font-size: 28vw;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+.theme-offday .footer-wordmark span {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+.theme-offday .footer-bottom {
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 6px;
+  }
+
+.theme-offday .footer-bottom > span:nth-child(2) {
+    width: 100%;
+    order: 3;
+  }
+
+.theme-offday .footer-bottom > a {
+    margin-left: auto;
+  }
+
+.theme-offday .bag-dialog {
+    padding: 25px;
+  }
+
+.theme-offday .bag-dialog h2 {
+    font-size: 60px;
+  }
+
+.theme-offday .bag-item {
+    gap: 12px;
+  }
+
+.theme-offday .bag-item h3 {
+    font-size: 12px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+.theme-offday {
+    scroll-behavior: auto;
+  }
+
+.theme-offday *, .theme-offday *:before, .theme-offday *:after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+}
+
+.theme-offday /* One readiness sequence, .theme-offday then a slow move through the same product model. */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: var(--orange);
+  color: var(--paper);
+  overflow: hidden;
+}
+
+.theme-offday .loading-screen > .wordmark {
+  position: absolute;
+  top: 32px;
+  left: 5%;
+  z-index: 3;
+}
+
+.theme-offday .loader-skip {
+  position: absolute;
+  right: 5%;
+  top: 35px;
+  z-index: 3;
+  color: var(--paper);
+  background: transparent;
+  font-size: 10px;
+  border: 1px solid #f5eddb66;
+  padding: 10px 15px;
+  border-radius: 3px;
+}
+
+.theme-offday .loader-scene {
+  position: absolute;
+  inset: 0;
+}
+
+.theme-offday .loader-readout {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  pointer-events: none;
+  transition: opacity 0.65s;
+}
+
+.theme-offday .loader-number {
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-size: clamp(130px, 22vw, 300px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -4px;
+}
+
+.theme-offday .loader-number > span {
+  font-size: 0.35em;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 0.5em;
+  letter-spacing: -1px;
+}
+
+.theme-offday .loader-progress {
+  height: 2px;
+  background: #f5eddb44;
+  width: 190px;
+  overflow: hidden;
+}
+
+.theme-offday .loader-progress i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: var(--paper);
+  transform-origin: left;
+  transition: transform 0.1s;
+}
+
+.theme-offday .loader-readout > small {
+  font-size: 7px;
+  letter-spacing: 1.4px;
+  margin-top: 20px;
+}
+
+.theme-offday .phase-can .loader-readout {
+  opacity: 0;
+}
+
+.theme-offday .loader-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+  font-size: 8px;
+  letter-spacing: 1.5px;
+}
+
+.theme-offday .flavor-flight {
+  height: 320svh;
+  transition: background 0.8s;
+  color: var(--paper);
+}
+
+.theme-offday .flight-sticky {
+  height: 100svh;
+  min-height: 700px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+}
+
+.theme-offday .flight-kicker {
+  position: absolute;
+  left: 6%;
+  top: 40px;
+  font-size: 8px;
+  letter-spacing: 1.8px;
+}
+
+.theme-offday .flight-title {
+  position: absolute;
+  left: 6%;
+  top: 17%;
+  font-family: 'Barlow Condensed', Impact, sans-serif;
+  font-weight: 800;
+  font-size: clamp(90px, 13vw, 190px);
+  line-height: 0.8;
+  letter-spacing: -2px;
+  margin: 0;
+}
+
+.theme-offday .flight-title > span {
+  opacity: 0.45;
+}
+
+.theme-offday .flight-scene {
+  position: absolute;
+  inset: 3% 0 4% 27%;
+}
+
+.theme-offday .ingredient-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.theme-offday .ingredient-canvas canvas {
+  display: block;
+}
+
+.theme-offday .fruit-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.theme-offday .fruit-canvas canvas {
+  display: block;
+  filter: drop-shadow(0 12px 16px rgba(35, 26, 16, 0.3));
+}
+
+.theme-offday .flight-copy {
+  position: absolute;
+  right: 5%;
+  bottom: 19%;
+  max-width: 240px;
+  z-index: 3;
+}
+
+.theme-offday .flight-copy > .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1px;
+}
+
+.theme-offday .flight-copy h3 {
+  font-size: 29px;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  margin: 16px 0;
+}
+
+.theme-offday .flight-copy p {
+  font-size: 11px;
+  line-height: 1.8;
+}
+
+.theme-offday .flight-picker {
+  position: absolute;
+  left: 6%;
+  bottom: 75px;
+  display: flex;
+  gap: 25px;
+  z-index: 4;
+}
+
+.theme-offday .flight-picker button {
+  color: var(--paper);
+  background: transparent;
+  border-top: 1px solid #f5eddb55;
+  text-align: left;
+  min-width: 115px;
+  padding: 13px 0;
+  font-size: 9px;
+  opacity: 0.55;
+}
+
+.theme-offday .flight-picker button[aria-pressed='true'] {
+  opacity: 1;
+  border-color: var(--paper);
+}
+
+.theme-offday .flight-picker button > span {
+  display: block;
+  font-size: 8px;
+  margin-bottom: 9px;
+}
+
+.theme-offday .flight-scroll {
+  position: absolute;
+  bottom: 28px;
+  left: 6%;
+  font-size: 7px;
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.theme-offday .benefits-story {
+  height: 310svh;
+  transition: background 0.7s;
+}
+
+.theme-offday .benefits-story .story-text h2 {
+  font-size: clamp(60px, 7.5vw, 115px);
+}
+
+.theme-offday .benefits-scene {
+  position: absolute;
+  inset: 5% -5% 6% 35%;
+}
+
+.theme-offday .ingredient-label {
+  position: absolute;
+  right: 12%;
+  bottom: 16%;
+  padding: 15px 20px;
+  background: #f5eddbeb;
+  border-top: 1px solid #7c8167;
+  max-width: 210px;
+}
+
+.theme-offday .ingredient-label > i {
+  position: absolute;
+  top: -33px;
+  left: 10px;
+  height: 32px;
+  width: 1px;
+  background: #7c8167;
+}
+
+.theme-offday .ingredient-label > i:before {
+  content: '';
+  position: absolute;
+  left: -3px;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--orange);
+}
+
+.theme-offday .ingredient-label > strong {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.theme-offday .ingredient-label > small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 0.5px;
+  margin-top: 7px;
+  color: #737760;
+}
+
+@media (max-width: 650px) {
+.theme-offday .loading-screen > .wordmark {
+    top: 24px;
+    left: 6%;
+  }
+
+.theme-offday .loader-skip {
+    top: 24px;
+    right: 6%;
+  }
+
+.theme-offday .loader-readout > .eyebrow {
+    font-size: 8px;
+  }
+
+.theme-offday .loader-number {
+    font-size: 160px;
+  }
+
+.theme-offday .loader-readout > small {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+
+.theme-offday .flavor-flight {
+    height: 330svh;
+  }
+
+.theme-offday .flight-sticky {
+    min-height: 740px;
+  }
+
+.theme-offday .flight-kicker {
+    top: 28px;
+    font-size: 6px;
+  }
+
+.theme-offday .flight-title {
+    top: 11%;
+    font-size: 24vw;
+    left: 6%;
+    line-height: 0.8;
+  }
+
+.theme-offday .flight-scene {
+    inset: 26% -30% 11% -11%;
+  }
+
+.theme-offday .flight-copy {
+    right: 6%;
+    bottom: 16%;
+    width: 125px;
+  }
+
+.theme-offday .flight-copy > .eyebrow {
+    font-size: 6px;
+  }
+
+.theme-offday .flight-copy h3 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+
+.theme-offday .flight-copy p {
+    font-size: 8px;
+    line-height: 1.6;
+  }
+
+.theme-offday .flight-picker {
+    left: 6%;
+    right: 6%;
+    bottom: 57px;
+    gap: 14px;
+    justify-content: space-between;
+  }
+
+.theme-offday .flight-picker button {
+    font-size: 7px;
+    min-width: 0;
+    flex: 1;
+    padding: 10px 0;
+  }
+
+.theme-offday .flight-picker button > span {
+    font-size: 7px;
+    margin-bottom: 5px;
+  }
+
+.theme-offday .flight-scroll {
+    font-size: 5px;
+    bottom: 22px;
+    letter-spacing: 0.7px;
+  }
+
+.theme-offday .benefits-story .story-text h2 {
+    font-size: 56px;
+  }
+
+.theme-offday .benefits-scene {
+    inset: 340px -23% 35px -6%;
+  }
+
+.theme-offday .ingredient-label {
+    right: 19%;
+    bottom: 7%;
+    padding: 10px 13px;
+    max-width: 165px;
+  }
+
+.theme-offday .ingredient-label > strong {
+    font-size: 9px;
+  }
+
+.theme-offday .ingredient-label > small {
+    font-size: 6px;
+  }
+
+.theme-offday .benefits-story .story-footnote {
+    max-width: 150px;
+    font-size: 5px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+.theme-offday .loading-screen {
+    display: none;
+  }
+
+}
+
+.theme-offday /* One persistent product travels between the measured section anchors. */
+.product-journey {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  z-index: 8;
+  pointer-events: none;
+  will-change: transform;
+}
+
+.theme-offday .hero-can, .theme-offday .can-interactive {
+  touch-action: pan-y;
+  cursor: grab;
+}
+
+.theme-offday .lifestyle-can {
+  position: absolute;
+  width: 65%;
+  height: 85%;
+  right: 0;
+  bottom: 0;
+}
+
+.theme-offday .ingredient-label {
+  z-index: 9;
+}
+
+@media (min-width: 701px) {
+.theme-offday .flight-copy {
+    bottom: 7%;
+  }
+
+}
+

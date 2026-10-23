@@ -1,0 +1,18 @@
+# dependencies
+node_modules/
+
+# next.js
+.next/
+out/
+
+# env / secrets
+.env*
+!.env.example
+
+# typescript / tooling
+*.tsbuildinfo
+.DS_Store
+
+# archived standalone apps (migrated into src/features)
+aura-studio/
+offday-energy/
