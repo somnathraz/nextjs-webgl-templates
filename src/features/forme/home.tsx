@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowDown, ArrowUpRight, Plus } from 'lucide-react';
+import { TemplateDownloadLink } from '@/components/template-download-link';
 import { ArchitectureExperience } from './components/architecture-experience';
 import { Reveal } from './components/reveal';
 import { ProjectDetails } from './components/project-details';
@@ -17,6 +18,9 @@ export function FormeHome() {
           <Link href="/">
             All showcases <ArrowUpRight size={13} />
           </Link>
+          <TemplateDownloadLink>
+            Download ZIP <ArrowUpRight size={13} />
+          </TemplateDownloadLink>
         </nav>
         <a className="forme-nav-cta" href="#forme-contact">
           Let’s talk <ArrowUpRight size={15} />

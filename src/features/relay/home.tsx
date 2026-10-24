@@ -6,6 +6,7 @@ import {
   ScanLine,
   ShieldCheck,
 } from 'lucide-react';
+import { TemplateDownloadLink } from '@/components/template-download-link';
 import { Hero } from './components/hero';
 import { ScrollStory } from './components/scroll-story';
 import { Playground } from './components/playground';
@@ -30,6 +31,9 @@ export function RelayHome() {
           <Link href="/">
             All showcases <ArrowUpRight size={11} />
           </Link>
+          <TemplateDownloadLink>
+            Download ZIP <ArrowUpRight size={11} />
+          </TemplateDownloadLink>
         </nav>
         <a href="#relay-playground" className="relay-nav-cta">
           Try the demo <ArrowUpRight size={13} />

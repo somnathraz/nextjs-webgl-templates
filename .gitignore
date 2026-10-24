@@ -16,3 +16,6 @@ out/
 # archived standalone apps (migrated into src/features)
 aura-studio/
 offday-energy/
+
+# generated downloadable template (built by pack:template / prebuild)
+public/downloads/

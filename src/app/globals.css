@@ -109,6 +109,57 @@ a {
   padding-bottom: 10px;
 }
 
+.hub-download {
+  margin-top: 8vh;
+  padding-top: 36px;
+  border-top: 1px solid #2a2f2b;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 28px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hub-download-label {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #8b9188;
+}
+
+.hub-download-copy {
+  margin: 0;
+  color: #8b9188;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 420px;
+}
+
+.hub-download-copy code {
+  font-size: 12px;
+  color: #c4ef74;
+}
+
+.hub-download-btn {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border: 1px solid #c4ef74;
+  color: #c4ef74;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  transition: background 0.2s, color 0.2s;
+}
+
+.hub-download-btn:hover {
+  background: #c4ef74;
+  color: #121311;
+}
+
 .theme-aura,
 .theme-offday {
   min-height: 100svh;
@@ -132,11 +183,18 @@ a {
   top: 16px;
 }
 
-.hub-back {
+.hub-chrome {
   position: fixed;
   top: 18px;
   right: 18px;
   z-index: 50;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hub-back,
+.hub-download-chip {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 11px;
   letter-spacing: 0.12em;
@@ -146,10 +204,17 @@ a {
   opacity: 0.55;
   background: rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(8px);
+  color: inherit;
 }
 
-.hub-back:hover {
+.hub-back:hover,
+.hub-download-chip:hover {
   opacity: 1;
+}
+
+.hub-download-chip {
+  border-color: #c4ef74;
+  color: #c4ef74;
 }
 
 @media (max-width: 720px) {
@@ -160,5 +225,22 @@ a {
 
   .hub-top {
     flex-direction: column;
+  }
+
+  .hub-download {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hub-chrome {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .hub-back,
+  .hub-download-chip {
+    padding: 8px 10px;
+    font-size: 10px;
   }
 }

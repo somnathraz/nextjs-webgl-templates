@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { TemplateDownloadLink } from '@/components/template-download-link';
 
 const SHOWCASES = [
   {
@@ -52,6 +53,16 @@ export default function GalleryPage() {
           </li>
         ))}
       </ul>
+      <aside className="hub-download">
+        <div>
+          <p className="hub-download-label">Starter template</p>
+          <p className="hub-download-copy">
+            Full Next.js hub as a ZIP — routes, features, and scoped themes.
+            Unzip, run <code>npm ci</code>, then <code>npm run dev</code>.
+          </p>
+        </div>
+        <TemplateDownloadLink className="hub-download-btn" />
+      </aside>
     </main>
   );
 }

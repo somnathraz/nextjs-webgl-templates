@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import { ShowcaseChrome } from '@/components/showcase-chrome';
 import '@/features/offday/styles/theme.css';
 
 export const metadata: Metadata = {
@@ -16,9 +16,7 @@ export default function OffdayLayout({
       <a className="skip-link" href="#main">
         Skip to content
       </a>
-      <Link href="/" className="hub-back" aria-label="Back to gallery">
-        All showcases
-      </Link>
+      <ShowcaseChrome />
       {children}
     </div>
   );

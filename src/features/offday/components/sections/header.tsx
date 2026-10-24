@@ -1,5 +1,6 @@
 'use client';
 import { ArrowUpRight, ShoppingBag } from 'lucide-react';
+import { TemplateDownloadLink } from '@/components/template-download-link';
 import { useShop } from '@/features/offday/components/ui/shop-provider';
 export function Header() {
   const { count, open } = useShop();
@@ -12,6 +13,7 @@ export function Header() {
         <a href="#flavor-flight">The flavors</a>
         <a href="#flavors">The good stuff</a>
         <a href="#our-way">Our kind of day</a>
+        <TemplateDownloadLink>Download ZIP</TemplateDownloadLink>
       </nav>
       <div className="header-actions">
         <a href="#shop" className="header-shop">

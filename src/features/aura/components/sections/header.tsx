@@ -1,4 +1,5 @@
 import { ArrowUpRight, AudioLines } from 'lucide-react';
+import { TemplateDownloadLink } from '@/components/template-download-link';
 export function Header() {
   return (
     <header className="header">
@@ -10,6 +11,7 @@ export function Header() {
         <a href="#design">The design</a>
         <a href="#sound">The sound</a>
         <a href="#details">The details</a>
+        <TemplateDownloadLink>Download ZIP</TemplateDownloadLink>
       </nav>
       <a href="#configure" className="nav-cta">
         Make it yours <ArrowUpRight size={14} />

@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack --hostname 0.0.0.0 --port 3000",
+    "prebuild": "node scripts/pack-template.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "pack:template": "node scripts/pack-template.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "^9.0.0",
