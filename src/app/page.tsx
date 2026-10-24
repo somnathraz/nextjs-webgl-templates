@@ -2,6 +2,20 @@ import Link from 'next/link';
 
 const SHOWCASES = [
   {
+    href: '/relay',
+    index: '04',
+    name: 'Relay',
+    blurb:
+      'Agent orchestration in motion. WebGL signals, interactive workflows, and a visible execution trace.',
+  },
+  {
+    href: '/forme',
+    index: '03',
+    name: 'FORME Architecture',
+    blurb:
+      'An immersive architectural study. Explore space, light, and materials.',
+  },
+  {
     href: '/aura',
     index: '01',
     name: 'Aura Studio',

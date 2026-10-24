@@ -1,0 +1,859 @@
+.theme-forme {
+  --f-paper: #eeede6;
+  --f-ink: #30372e;
+  --f-muted: #74796e;
+  min-height: 100svh;
+  background: var(--f-paper);
+  color: var(--f-ink);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.theme-forme * {
+  box-sizing: border-box;
+}
+.theme-forme button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0;
+}
+.theme-forme a,
+.theme-forme button {
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-forme :focus-visible {
+  outline: 2px solid #ad703b;
+  outline-offset: 5px;
+}
+.theme-forme h1,
+.theme-forme h2,
+.theme-forme h3,
+.theme-forme p {
+  margin: 0;
+}
+.theme-forme h1,
+.theme-forme h2 {
+  font-weight: 400;
+  letter-spacing: -0.065em;
+  line-height: 0.98;
+}
+.theme-forme em {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 400;
+}
+.theme-forme ::selection {
+  background: #ced4ba;
+  color: #283025;
+}
+.theme-forme section {
+  scroll-margin-top: 20px;
+}
+.theme-forme .forme-eyebrow {
+  font-size: 9px;
+  letter-spacing: 0.13em;
+  font-weight: 500;
+}
+.theme-forme .forme-skip {
+  position: fixed;
+  top: -70px;
+  left: 16px;
+  padding: 12px;
+  background: #fff;
+  z-index: 100;
+}
+.theme-forme .forme-skip:focus {
+  top: 16px;
+}
+.theme-forme .forme-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 27px 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  z-index: 5;
+}
+.theme-forme .forme-logo {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -3px;
+  line-height: 1;
+}
+.theme-forme .forme-logo span {
+  font-size: 11px;
+  vertical-align: top;
+  letter-spacing: 0;
+  margin-left: 4px;
+}
+.theme-forme .forme-nav nav {
+  display: flex;
+  gap: 32px;
+  font-size: 11px;
+}
+.theme-forme .forme-nav nav a,
+.theme-forme .forme-nav-cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.theme-forme .forme-nav-cta {
+  font-size: 12px;
+  border-bottom: 1px solid #ffffff80;
+  padding-bottom: 6px;
+}
+.theme-forme .forme-nav a:hover {
+  opacity: 0.7;
+}
+.theme-forme .forme-hero {
+  height: 100svh;
+  min-height: 700px;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+.theme-forme .forme-hero-image {
+  object-fit: cover;
+  animation: forme-image-arrive 2.3s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.theme-forme .forme-hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, #16231f55, transparent 55%, #15221c99),
+    linear-gradient(90deg, #17251e40, transparent 70%);
+}
+.theme-forme .forme-hero-top {
+  position: absolute;
+  top: 120px;
+  left: 4%;
+  right: 4%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #ffffff55;
+  padding-top: 15px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+}
+.theme-forme .forme-hero-copy {
+  position: absolute;
+  top: 23%;
+  left: 7%;
+}
+.theme-forme .forme-hero-copy h1 {
+  font-size: clamp(100px, 12vw, 184px);
+  line-height: 0.87;
+  letter-spacing: -0.07em;
+}
+.theme-forme .forme-hero-copy em {
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+.theme-forme .forme-hero-copy p {
+  margin-top: 30px;
+  font-size: 13px;
+  line-height: 1.7;
+}
+.theme-forme .forme-explore-link {
+  position: absolute;
+  right: 6%;
+  top: 48%;
+  width: 104px;
+  height: 104px;
+  border: 1px solid #fff9;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(3px);
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+.theme-forme .forme-explore-link:hover {
+  background: #ffffff22;
+  transform: translateY(4px);
+}
+.theme-forme .forme-hero-bottom {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 35px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+.theme-forme .forme-hero-bottom span {
+  font-size: 8px;
+  letter-spacing: 0.13em;
+}
+.theme-forme .forme-hero-bottom strong {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+  font-weight: 400;
+  font-size: 20px;
+  margin-top: 12px;
+}
+.theme-forme .forme-intro {
+  padding: 90px 7% 95px;
+}
+.theme-forme .forme-section-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.theme-forme .forme-intro h2 {
+  font-size: clamp(64px, 8.7vw, 132px);
+  margin: 65px 0 45px;
+}
+.theme-forme .forme-intro h2 em {
+  color: #808571;
+}
+.theme-forme .forme-intro-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.theme-forme .forme-coordinate {
+  font-size: 8px;
+  letter-spacing: 0.1em;
+  line-height: 2;
+}
+.theme-forme .forme-intro-bottom p {
+  max-width: 390px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #72766b;
+}
+.theme-forme .forme-experience {
+  height: 320svh;
+}
+.theme-forme .forme-experience-sticky {
+  height: 100svh;
+  min-height: 740px;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background: #d8dccd;
+  transition:
+    background 1s,
+    color 1s;
+}
+.theme-forme .forme-experience-sticky.is-night {
+  background: #343e43;
+  color: #e5e6dd;
+}
+.theme-forme .forme-experience-heading {
+  position: absolute;
+  left: 5%;
+  top: 45px;
+  z-index: 2;
+  max-width: 380px;
+  pointer-events: none;
+}
+.theme-forme .forme-experience-heading h2 {
+  font-size: clamp(38px, 4.3vw, 66px);
+  margin: 23px 0 17px;
+}
+.theme-forme .forme-experience-heading p {
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 270px;
+  opacity: 0.65;
+}
+.theme-forme .forme-scene {
+  position: absolute;
+  inset: 8% 3% 4% 29%;
+}
+.theme-forme .forme-canvas {
+  width: 100%;
+  height: 100%;
+}
+.theme-forme .forme-scene-loading,
+.theme-forme .forme-scene-fallback {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 16px;
+  padding: 30px;
+  text-align: center;
+  font-size: 12px;
+}
+.theme-forme .forme-scene-fallback {
+  background: url('/forme/courtyard-house.png') center/cover;
+  color: white;
+}
+.theme-forme .forme-scene-fallback span {
+  max-width: 280px;
+  background: #203025bb;
+  padding: 12px;
+}
+.theme-forme .forme-view-picker {
+  position: absolute;
+  left: 5%;
+  bottom: 110px;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  z-index: 2;
+}
+.theme-forme .forme-view-picker button {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  background: transparent;
+  border-bottom: 1px solid #747d6838;
+  text-align: left;
+  font-size: 11px;
+  opacity: 0.5;
+}
+.theme-forme .forme-view-picker button[aria-pressed='true'] {
+  opacity: 1;
+}
+.theme-forme .forme-view-picker button span {
+  font-size: 8px;
+}
+.theme-forme .forme-view-picker button svg {
+  margin-left: auto;
+}
+.theme-forme .forme-view-picker .forme-follow {
+  font-size: 9px;
+  border: 0;
+  justify-content: start;
+}
+.theme-forme .forme-view-picker .forme-follow svg {
+  margin-left: 0;
+}
+.theme-forme .forme-materials {
+  position: absolute;
+  right: 5%;
+  bottom: 100px;
+  z-index: 2;
+  background: #d8dccdcc;
+  padding: 16px;
+  color: #30372e;
+}
+.theme-forme .forme-material-buttons {
+  display: flex;
+  gap: 16px;
+  margin-top: 18px;
+}
+.theme-forme .forme-material-buttons button {
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  align-items: center;
+  font-size: 9px;
+  opacity: 0.55;
+}
+.theme-forme .forme-material-buttons button[aria-pressed='true'] {
+  opacity: 1;
+}
+.theme-forme .forme-material-buttons i {
+  display: block;
+  width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px #0001;
+}
+.theme-forme .forme-material-buttons button[aria-pressed='true'] i {
+  outline: 1px solid #59624c;
+  outline-offset: 4px;
+}
+.theme-forme .forme-material-note {
+  display: block;
+  font-size: 9px;
+  opacity: 0.65;
+  margin-top: 15px;
+}
+.theme-forme .forme-scene-actions {
+  position: absolute;
+  right: 5%;
+  top: 40px;
+  display: flex;
+  gap: 20px;
+  z-index: 2;
+}
+.theme-forme .forme-scene-actions button {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 10px;
+  padding: 10px 0;
+}
+.theme-forme .forme-scene-caption {
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
+  right: 5%;
+  border-top: 1px solid #747d6840;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+.theme-forme .forme-project {
+  padding: 90px 5%;
+}
+.theme-forme .forme-project-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 60px 0 45px;
+}
+.theme-forme .forme-project-title h2 {
+  font-size: clamp(70px, 9vw, 136px);
+}
+.theme-forme .forme-project-title p {
+  font-size: 13px;
+  color: var(--f-muted);
+  margin-right: 8%;
+  margin-bottom: 8px;
+}
+.theme-forme .forme-project-photo {
+  position: relative;
+  height: 70vw;
+  max-height: 740px;
+  overflow: hidden;
+}
+.theme-forme .forme-project-photo img {
+  object-fit: cover;
+  transition: transform 1s;
+}
+.theme-forme .forme-project-photo:hover img {
+  transform: scale(1.035);
+}
+.theme-forme .forme-project-photo > span {
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: #fff;
+}
+.theme-forme .forme-project-info {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 40px 10%;
+  padding-top: 40px;
+}
+.theme-forme .forme-project-info h3 {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  margin-bottom: 17px;
+}
+.theme-forme .forme-project-info p {
+  font-size: 13px;
+  color: var(--f-muted);
+  max-width: 420px;
+  line-height: 1.9;
+}
+.theme-forme .forme-project-info dl {
+  margin: 0;
+}
+.theme-forme .forme-project-info dl > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 13px 0;
+  border-bottom: 1px solid #30372e20;
+  font-size: 11px;
+}
+.theme-forme .forme-project-info dt {
+  color: var(--f-muted);
+}
+.theme-forme .forme-project-info dd {
+  margin: 0;
+}
+.theme-forme .forme-project-button {
+  padding: 15px 0;
+  border-bottom: 1px solid #30372e80;
+  background: transparent;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 250px;
+  font-size: 12px;
+}
+.theme-forme .forme-project-dialog {
+  border: 0;
+  background: #eeede6;
+  color: #30372e;
+  padding: 65px;
+  max-width: 660px;
+  width: 90vw;
+  max-height: 85svh;
+  overflow: auto;
+  font-family: Arial, sans-serif;
+}
+.theme-forme .forme-project-dialog::backdrop {
+  background: #15221ce0;
+  backdrop-filter: blur(6px);
+}
+.theme-forme .forme-project-dialog h2 {
+  font-size: 52px;
+  margin: 30px 0;
+}
+.theme-forme .forme-project-dialog h3 {
+  margin: 25px 0 12px;
+  font-size: 16px;
+}
+.theme-forme .forme-project-dialog p {
+  font-size: 13px;
+  line-height: 1.9;
+}
+.theme-forme .forme-dialog-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  background: transparent;
+}
+.theme-forme .forme-project-dialog .forme-project-button {
+  margin-top: 30px;
+}
+.theme-forme .forme-material-story {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e1e1d6;
+  min-height: 620px;
+}
+.theme-forme .forme-material-photo {
+  position: relative;
+  overflow: hidden;
+}
+.theme-forme .forme-material-photo img {
+  object-fit: cover;
+  object-position: 18% 50%;
+  transform: scale(1.8);
+}
+.theme-forme .forme-material-story-copy {
+  padding: 75px 12%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+}
+.theme-forme .forme-material-story-copy h2 {
+  font-size: clamp(42px, 4.3vw, 68px);
+  line-height: 1.07;
+  margin: 25px 0;
+}
+.theme-forme .forme-material-story-copy p {
+  font-size: 13px;
+  line-height: 1.9;
+  color: var(--f-muted);
+  max-width: 320px;
+}
+.theme-forme .forme-material-story-copy a {
+  font-size: 11px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.theme-forme .forme-contact {
+  padding: 110px 7%;
+  text-align: center;
+}
+.theme-forme .forme-contact h2 {
+  font-size: clamp(75px, 10vw, 150px);
+  margin: 50px 0;
+}
+.theme-forme .forme-contact a {
+  display: inline-flex;
+  align-items: center;
+  gap: 60px;
+  border-bottom: 1px solid #30372e80;
+  padding-bottom: 18px;
+  font-size: 16px;
+}
+.theme-forme .forme-contact p {
+  font-size: 9px;
+  color: var(--f-muted);
+  margin-top: 24px;
+}
+.theme-forme .forme-footer {
+  padding: 35px 5% 25px;
+  background: #30392f;
+  color: #e8e9df;
+  overflow: hidden;
+}
+.theme-forme .forme-footer > div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 8px;
+  letter-spacing: 0.1em;
+}
+.theme-forme .forme-footer-wordmark {
+  display: block;
+  font-size: 30vw;
+  font-weight: 500;
+  letter-spacing: -0.09em;
+  line-height: 1.1;
+  margin-left: -1vw;
+}
+.theme-forme .forme-footer-wordmark > span {
+  font-size: 4vw;
+  vertical-align: top;
+  position: relative;
+  top: 5vw;
+  margin-left: 2vw;
+  letter-spacing: 0;
+}
+@keyframes forme-image-arrive {
+  from {
+    transform: scale(1.08);
+    filter: brightness(0.7);
+  }
+  to {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+}
+@media (max-width: 700px) {
+  .theme-forme .forme-nav {
+    padding: 24px 6%;
+  }
+  .theme-forme .forme-logo {
+    font-size: 34px;
+  }
+  .theme-forme .forme-nav nav a:not(:last-child) {
+    display: none;
+  }
+  .theme-forme .forme-nav nav {
+    font-size: 9px;
+  }
+  .theme-forme .forme-nav-cta {
+    display: none;
+  }
+  .theme-forme .forme-hero {
+    min-height: 740px;
+  }
+  .theme-forme .forme-hero-image {
+    object-position: 60% center;
+  }
+  .theme-forme .forme-hero-top {
+    top: 95px;
+    left: 6%;
+    right: 6%;
+    font-size: 7px;
+  }
+  .theme-forme .forme-hero-top span:last-child {
+    display: none;
+  }
+  .theme-forme .forme-hero-copy {
+    top: 23%;
+    left: 7%;
+  }
+  .theme-forme .forme-hero-copy h1 {
+    font-size: 115px;
+  }
+  .theme-forme .forme-hero-copy p {
+    font-size: 11px;
+  }
+  .theme-forme .forme-explore-link {
+    top: auto;
+    bottom: 145px;
+    right: 7%;
+    width: 80px;
+    height: 80px;
+    font-size: 8px;
+  }
+  .theme-forme .forme-hero-bottom {
+    left: 7%;
+    right: 7%;
+    bottom: 30px;
+  }
+  .theme-forme .forme-hero-bottom > span {
+    display: none;
+  }
+  .theme-forme .forme-hero-bottom strong {
+    font-size: 18px;
+  }
+  .theme-forme .forme-intro {
+    padding: 65px 7%;
+  }
+  .theme-forme .forme-intro h2 {
+    font-size: 61px;
+    margin: 45px 0 35px;
+  }
+  .theme-forme .forme-intro-bottom {
+    display: block;
+  }
+  .theme-forme .forme-coordinate {
+    display: none;
+  }
+  .theme-forme .forme-intro-bottom p {
+    font-size: 13px;
+  }
+  .theme-forme .forme-experience {
+    height: 320svh;
+  }
+  .theme-forme .forme-experience-sticky {
+    min-height: 800px;
+  }
+  .theme-forme .forme-experience-heading {
+    left: 7%;
+    right: 7%;
+    top: 35px;
+    max-width: 300px;
+  }
+  .theme-forme .forme-experience-heading h2 {
+    font-size: 40px;
+    max-width: 260px;
+  }
+  .theme-forme .forme-experience-heading p {
+    font-size: 11px;
+    max-width: 230px;
+  }
+  .theme-forme .forme-scene {
+    inset: 29% -17% 24% -17%;
+  }
+  .theme-forme .forme-scene-actions {
+    right: 7%;
+    top: 18px;
+    gap: 14px;
+  }
+  .theme-forme .forme-scene-actions button {
+    font-size: 8px;
+  }
+  .theme-forme .forme-experience-heading > .forme-eyebrow {
+    font-size: 7px;
+  }
+  .theme-forme .forme-view-picker {
+    left: 7%;
+    bottom: 95px;
+    width: 125px;
+  }
+  .theme-forme .forme-view-picker button {
+    font-size: 9px;
+    padding: 9px 0;
+  }
+  .theme-forme .forme-materials {
+    right: 5%;
+    bottom: 95px;
+    padding: 12px;
+  }
+  .theme-forme .forme-material-buttons {
+    gap: 12px;
+  }
+  .theme-forme .forme-material-buttons button {
+    font-size: 8px;
+  }
+  .theme-forme .forme-material-buttons i {
+    width: 25px;
+    height: 25px;
+  }
+  .theme-forme .forme-material-note {
+    max-width: 135px;
+    font-size: 8px;
+  }
+  .theme-forme .forme-scene-caption {
+    left: 7%;
+    right: 7%;
+    font-size: 6px;
+    bottom: 30px;
+  }
+  .theme-forme .forme-project {
+    padding: 65px 7%;
+  }
+  .theme-forme .forme-project-title {
+    display: block;
+    margin: 40px 0 30px;
+  }
+  .theme-forme .forme-project-title h2 {
+    font-size: 65px;
+  }
+  .theme-forme .forme-project-title p {
+    margin-top: 25px;
+    font-size: 11px;
+  }
+  .theme-forme .forme-project-photo {
+    height: 470px;
+    margin: 0 -8%;
+  }
+  .theme-forme .forme-project-photo img {
+    object-position: 65% center;
+  }
+  .theme-forme .forme-project-info {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .theme-forme .forme-project-dialog {
+    padding: 50px 25px;
+  }
+  .theme-forme .forme-project-dialog h2 {
+    font-size: 40px;
+  }
+  .theme-forme .forme-material-story {
+    grid-template-columns: 1fr;
+  }
+  .theme-forme .forme-material-photo {
+    min-height: 360px;
+  }
+  .theme-forme .forme-material-story-copy {
+    padding: 50px 7%;
+    gap: 25px;
+  }
+  .theme-forme .forme-material-story-copy h2 {
+    font-size: 48px;
+  }
+  .theme-forme .forme-contact {
+    padding: 75px 7%;
+  }
+  .theme-forme .forme-contact h2 {
+    font-size: 72px;
+    margin: 35px 0;
+  }
+  .theme-forme .forme-contact .forme-eyebrow {
+    font-size: 7px;
+  }
+  .theme-forme .forme-footer > div {
+    font-size: 6px;
+    gap: 20px;
+  }
+  .theme-forme .forme-footer > div > span:nth-child(2) {
+    display: none;
+  }
+  .theme-forme .forme-footer-wordmark {
+    font-size: 29vw;
+    margin: 30px 0;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theme-forme * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+.theme-forme .forme-scene::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(90deg, #d8dccd 0%, transparent 14%);
+}
+.theme-forme .is-night .forme-scene::after {
+  background: linear-gradient(90deg, #343e43 0%, transparent 14%);
+}
+@media (max-width: 700px) {
+  .theme-forme .forme-scene::after {
+    display: none;
+  }
+}

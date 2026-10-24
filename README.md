@@ -7,6 +7,8 @@ One Next.js app. One domain. Each showcase is a route.
 | `/` | Gallery |
 | `/aura` | Aura Studio |
 | `/offday` | Offday Energy |
+| `/forme` | FORME Architecture |
+| `/relay` | Relay Agent Orchestration |
 
 ## Run
 
