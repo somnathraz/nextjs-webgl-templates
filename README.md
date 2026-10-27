@@ -9,6 +9,12 @@ One Next.js app. One domain. Each showcase is a route.
 | `/offday` | Offday Energy |
 | `/forme` | FORME Architecture |
 | `/relay` | Relay Agent Orchestration |
+| `/nova` | Nova Particle Engine |
+| `/helios` | HELIOS Kinetic Light Sculpture |
+| `/vela` | Vela Spatial Computing |
+| `/singularity` | Singularity (raymarched black hole) |
+| `/mycelia` | Mycelia (GPU slime-mold / artificial life) |
+| `/flux` | Flux (real-time GPU fluid simulation) |
 
 ## Run
 
@@ -30,7 +36,7 @@ npm run build
 1. Create `src/features/<slug>/` with components, hooks, lib, and scoped `styles/theme.css`
 2. Add `src/app/<slug>/layout.tsx` (import theme, wrap `.theme-<slug>`) and `page.tsx`
 3. Put static assets in `public/<slug>/`
-4. Add a card on `src/app/page.tsx`
+4. Add an entry in `src/lib/templates.ts`
 5. Push — one deploy ships the new route
 
 Scope CSS with:
