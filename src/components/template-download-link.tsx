@@ -14,8 +14,8 @@ export function TemplateDownloadLink({
     <a
       className={className}
       href={TEMPLATE_DOWNLOAD_HREF}
-      download="premium-frontend-template.zip"
-      aria-label="Download Premium Frontend template ZIP"
+      download="nextjs-webgl-templates-template.zip"
+      aria-label="Download all templates as a ZIP"
     >
       {children}
     </a>
