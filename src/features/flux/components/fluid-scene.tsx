@@ -214,7 +214,7 @@ function buildFluid() {
     uVelocity: { value: null },
     uCurl: { value: null },
     uTexel: { value: texel },
-    uCurlStrength: { value: 25 },
+    uCurlStrength: { value: 13 },
     uDt: { value: DT },
   });
   const divergenceMat = mat(divergenceFrag, { uVelocity: { value: null }, uTexel: { value: texel } });
@@ -332,9 +332,9 @@ function Simulation({
       const ex = 0.5 + 0.33 * Math.sin(t * 0.27) * coverX;
       const ey = 0.5 + 0.33 * Math.sin(t * 0.41 + 1.7) * coverY;
       const tang = new THREE.Vector3(Math.cos(t * 0.27), Math.sin(t * 0.41 + 1.7), 0)
-        .multiplyScalar(0.2);
+        .multiplyScalar(0.16);
       splat(gl, ex, ey, tang, 0.0003, 'vel');
-      splat(gl, ex, ey, hsv((t * 0.06) % 1, 0.85, 0.95).multiplyScalar(0.22), 0.0003, 'dye');
+      splat(gl, ex, ey, hsv((t * 0.025) % 1, 0.85, 0.95).multiplyScalar(0.22), 0.0003, 'dye');
 
       // cursor paints when moving — delta is derived here, never on the signal
       const last = lastPtr.current;
@@ -351,7 +351,7 @@ function Simulation({
           const py = (sig.py - 0.5) * coverY + 0.5;
           const force = new THREE.Vector3(dvx, dvy, 0).multiplyScalar(9);
           splat(gl, px, py, force, 0.0004, 'vel');
-          splat(gl, px, py, hsv((t * 0.12 + 0.4) % 1, 0.85, 1).multiplyScalar(0.62), 0.0004, 'dye');
+          splat(gl, px, py, hsv((t * 0.05 + 0.4) % 1, 0.85, 1).multiplyScalar(0.62), 0.0004, 'dye');
         }
       }
       last.x = sig.px;
@@ -390,7 +390,7 @@ function Simulation({
       // advect velocity, then dye
       f.advectMat.uniforms.uVelocity.value = f.velA.texture;
       f.advectMat.uniforms.uSource.value = f.velA.texture;
-      f.advectMat.uniforms.uDissipation.value = 0.997;
+      f.advectMat.uniforms.uDissipation.value = 0.992;
       f.renderPass(gl, f.advectMat, f.velB);
       [f.velA, f.velB] = [f.velB, f.velA];
 

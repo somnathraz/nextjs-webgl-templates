@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Mycelia — Life, grown live',
   description:
     'A GPU slime-mold simulation: over a million Physarum agents deposit and sense a chemical trail, self-organizing into living networks that react to your cursor.',
+  openGraph: { images: ['/mycelia/preview.jpg'] },
+  twitter: { card: 'summary_large_image' },
 };
 
 export default function MyceliaLayout({

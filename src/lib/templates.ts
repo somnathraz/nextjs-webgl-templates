@@ -86,7 +86,7 @@ export const TEMPLATES: Template[] = [
     name: 'Flux',
     blurb:
       'A real-time GPU fluid simulation. Navier–Stokes with advection, vorticity, and pressure projection — drag your cursor to paint the flow.',
-    preview: null,
+    preview: '/flux/preview.jpg',
     previewTone: '#0a0714',
     stack: ['Next.js', 'R3F', 'GPGPU'],
     topics: ['3d', 'storytelling'],
@@ -97,7 +97,7 @@ export const TEMPLATES: Template[] = [
     name: 'Mycelia',
     blurb:
       'Artificial life on the GPU. Over a million Physarum agents deposit and sense a trail, self-organizing into living networks that chase your cursor.',
-    preview: null,
+    preview: '/mycelia/preview.jpg',
     previewTone: '#05100c',
     stack: ['Next.js', 'R3F', 'GPGPU'],
     topics: ['3d', 'storytelling'],
@@ -119,7 +119,7 @@ export const TEMPLATES: Template[] = [
     name: 'Singularity',
     blurb:
       'A real-time raymarched black hole. Gravitational lensing, a Doppler-beamed accretion disk, and a photon ring — one fragment shader.',
-    preview: null,
+    preview: '/singularity/preview.jpg',
     previewTone: '#050309',
     stack: ['Next.js', 'R3F', 'GLSL'],
     topics: ['3d', 'storytelling'],
@@ -141,7 +141,7 @@ export const TEMPLATES: Template[] = [
     name: 'Nova',
     blurb:
       'A GPU particle engine. 90,000 points morph through four shapes as you scroll — pure WebGL shader, one draw call.',
-    preview: null,
+    preview: '/nova/preview.jpg',
     previewTone: '#0a0a12',
     stack: ['Next.js', 'R3F', 'GLSL'],
     topics: ['3d', 'storytelling'],

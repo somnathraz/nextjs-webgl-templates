@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   title: 'Flux — Fluid, painted with light',
   description:
     'A real-time GPU fluid simulation: semi-Lagrangian advection, Jacobi pressure projection, and vorticity confinement. Drag to paint the flow.',
+  openGraph: { images: ['/flux/preview.jpg'] },
+  twitter: { card: 'summary_large_image' },
 };
 
 export default function FluxLayout({
