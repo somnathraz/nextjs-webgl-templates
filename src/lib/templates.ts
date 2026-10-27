@@ -70,6 +70,28 @@ export const TOPICS: {
 
 export const TEMPLATES: Template[] = [
   {
+    href: '/odyssey',
+    slug: 'odyssey',
+    name: 'Odyssey',
+    blurb:
+      'An infinite terrain flythrough. Procedural mountains, volumetric mist, a moving sun, and a cinematic camera — explore on scroll or drift into endless auto flight.',
+    preview: '/odyssey/preview.jpg',
+    previewTone: '#284b49',
+    stack: ['Next.js', 'Three.js', 'GLSL'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
+    href: '/mercury',
+    slug: 'mercury',
+    name: 'Mercury',
+    blurb:
+      'Liquid chrome, raymarched in real time. Sphere-traced metaballs reflect a procedural studio with chromatic edges, a Fresnel rim, and a cursor-chasing droplet — one GLSL shader.',
+    preview: null,
+    previewTone: '#060607',
+    stack: ['Next.js', 'R3F', 'GLSL'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
     href: '/vela',
     slug: 'vela',
     name: 'Vela Spatial',

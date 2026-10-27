@@ -56,7 +56,9 @@ export function Visualizer({
 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
   const activeRef = useRef(active);
-  activeRef.current = active;
+  useEffect(() => {
+    activeRef.current = active;
+  }, [active]);
 
   useEffect(() => {
     const canvas = ref.current;

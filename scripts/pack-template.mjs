@@ -4,7 +4,7 @@
  * (respects .gitignore — no node_modules, .next, or archive apps).
  *
  * Usage: node scripts/pack-template.mjs
- * Output: public/downloads/premium-frontend-template.zip
+ * Output: public/downloads/nextjs-webgl-templates-template.zip
  */
 import { mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
@@ -13,7 +13,7 @@ import { execFileSync } from 'child_process';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const outDir = join(root, 'public', 'downloads');
-const outFile = join(outDir, 'premium-frontend-template.zip');
+const outFile = join(outDir, 'nextjs-webgl-templates-template.zip');
 
 mkdirSync(outDir, { recursive: true });
 
@@ -23,7 +23,7 @@ try {
     [
       'archive',
       '--format=zip',
-      '--prefix=premium-frontend/',
+      '--prefix=nextjs-webgl-templates/',
       `-o`,
       outFile,
       'HEAD',
@@ -42,4 +42,4 @@ if (!existsSync(outFile)) {
   process.exit(1);
 }
 
-console.log(`Template ZIP ready → public/downloads/premium-frontend-template.zip`);
+console.log(`Template ZIP ready → public/downloads/nextjs-webgl-templates-template.zip`);

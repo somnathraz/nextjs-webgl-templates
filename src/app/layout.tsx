@@ -16,11 +16,11 @@ const display = Newsreader({
 
 export const metadata: Metadata = {
   title: {
-    default: 'Premium Frontend',
-    template: '%s · Premium Frontend',
+    default: 'Next.js WebGL Templates',
+    template: '%s · Next.js WebGL Templates',
   },
   description:
-    'A Vercel-style gallery of premium interactive Next.js templates — 3D, storytelling, commerce, architecture, and agents.',
+    '13 open-source Next.js + React Three Fiber / WebGL templates — raymarching, GPU fluids, particles, scroll storytelling, and 3D product pages. MIT licensed.',
 };
 
 export default function RootLayout({

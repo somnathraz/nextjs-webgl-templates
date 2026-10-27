@@ -1,5 +1,5 @@
 'use client';
-import { useMemo, useEffect, useRef } from 'react';
+import { useMemo, useEffect, useRef, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 function usePeel(lime: boolean) {
@@ -133,7 +133,7 @@ function Floating({
   children: React.ReactNode;
 }) {
   const ref = useRef<THREE.Group>(null);
-  const seed = useMemo(() => Math.random() * Math.PI * 2, []);
+  const [seed] = useState(() => Math.random() * Math.PI * 2);
   useFrame((state) => {
     if (!ref.current) return;
     const t = state.clock.elapsedTime;

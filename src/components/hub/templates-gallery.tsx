@@ -21,7 +21,7 @@ export function TemplatesGallery() {
     <div className="tpl">
       <header className="tpl-nav">
         <Link href="/" className="tpl-brand">
-          Premium Frontend
+          Next.js WebGL Templates
         </Link>
         <nav aria-label="Gallery">
           <a href="#topics">Topics</a>
@@ -172,7 +172,7 @@ export function TemplatesGallery() {
           </TemplateDownloadLink>
           <a
             className="tpl-btn tpl-btn-ghost"
-            href="https://github.com/somnathraz/premium-frontend"
+            href="https://github.com/somnathraz/nextjs-webgl-templates"
             target="_blank"
             rel="noreferrer"
           >
@@ -182,7 +182,7 @@ export function TemplatesGallery() {
       </section>
 
       <footer className="tpl-footer">
-        <span>Premium Frontend</span>
+        <span>Next.js WebGL Templates</span>
         <span>One Next.js app · Route per template</span>
       </footer>
     </div>
