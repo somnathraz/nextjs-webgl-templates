@@ -70,6 +70,17 @@ export const TOPICS: {
 
 export const TEMPLATES: Template[] = [
   {
+    href: '/wrapped',
+    slug: 'wrapped',
+    name: 'Wrapped 2026',
+    blurb:
+      'A Wrapped engine in 3D. Every day is a cube that morphs through skylines, streaks and a 24-hour clock — with a versus mode, share cards and per-user OG images. Ships with GitHub and fitness adapters.',
+    preview: null,
+    previewTone: '#1a1238',
+    stack: ['Next.js', 'R3F', 'next/og'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
     href: '/odyssey',
     slug: 'odyssey',
     name: 'Odyssey',
