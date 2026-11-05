@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: '%s · Next.js WebGL Templates',
   },
   description:
-    '13 open-source Next.js + React Three Fiber / WebGL templates — raymarching, GPU fluids, particles, scroll storytelling, and 3D product pages. MIT licensed.',
+    '14 open-source Next.js + React Three Fiber / WebGL templates — raymarching, GPU fluids, particles, scroll storytelling, and 3D product pages. MIT licensed.',
 };
 
 export default function RootLayout({
