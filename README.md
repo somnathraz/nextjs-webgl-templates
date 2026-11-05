@@ -75,3 +75,10 @@ Fonts are loaded from Google Fonts (SIL OFL). 3D is built on [three.js](https://
 [MIT](LICENSE) © Somnath Khadanga
 
 Need something like this built for your product? [Work with me](https://somanathkhadanga.com).
+
+
+## Deploy with one click
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsomnathraz%2Fnextjs-webgl-templates)
+
+Browse the [template guides](https://somanathkhadanga.com/templates) for individual demos, features, and source links.
