@@ -70,6 +70,50 @@ export const TOPICS: {
 
 export const TEMPLATES: Template[] = [
   {
+    href: '/midnight',
+    slug: 'midnight',
+    name: 'MIDNIGHT',
+    blurb:
+      'A New Year page you scroll like a clock. Rise from a snowy street past lit windows and sky lanterns, scrub a ten-second countdown, then click the sky for fireworks. Live countdown to the real New Year included.',
+    preview: null,
+    previewTone: '#1a1338',
+    stack: ['Next.js', 'R3F', 'GLSL', 'Motion'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
+    href: '/fathom',
+    slug: 'fathom',
+    name: 'FATHOM',
+    blurb:
+      'A scroll-driven descent to the Mariana Trench. 2,400 instanced sardines, pulsing jellyfish, black smokers, a live depth gauge, a horizontal field log, torch-reveal type, and procedural sound.',
+    preview: null,
+    previewTone: '#06365c',
+    stack: ['Next.js', 'R3F', 'GLSL', 'Motion'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
+    href: '/morrow',
+    slug: 'morrow',
+    name: 'Morrow',
+    blurb:
+      'An editorial salon experience with a scroll-driven lookbook, services, stylists, and a complete local demo booking flow.',
+    preview: null,
+    previewTone: '#e2f898',
+    stack: ['Next.js', 'Motion', 'Booking'],
+    topics: ['storytelling'],
+  },
+  {
+    href: '/silo',
+    slug: 'silo',
+    name: 'SILO',
+    blurb:
+      'A kinetic lighting study. An orbital lamp, tactile finishes, quiet motion, and a signal-red studio footer.',
+    preview: null,
+    previewTone: '#d93828',
+    stack: ['Next.js', 'R3F', 'Motion'],
+    topics: ['3d', 'storytelling'],
+  },
+  {
     href: '/wrapped',
     slug: 'wrapped',
     name: 'Wrapped 2026',

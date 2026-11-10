@@ -8,6 +8,8 @@
 
 | Template | What it is | Stack | Live |
 |---|---|---|---|
+| **MIDNIGHT** | A New Year page you scroll like a clock: a shader-lit city, snow, sky lanterns, a scrubbed ten-second countdown, click-to-launch fireworks and a live countdown to the real New Year | R3F, GLSL, Motion | `/midnight` (not deployed yet) |
+| **FATHOM** | A scroll-driven descent to the Mariana Trench: 2,400 instanced sardines, jellyfish, black smokers, a live depth gauge, pinned type, a horizontal field log and procedural sound | R3F, GLSL, Motion | `/fathom` (not deployed yet) |
 | **Wrapped 2026** | A Wrapped engine: your GitHub year in 3D, versus mode, share cards and OG images, with an adapter for any per-day data | R3F, next/og | [demo](https://demo.somanathkhadanga.com/wrapped) |
 | **Odyssey** | Infinite procedural terrain flythrough with volumetric mist | Three.js, GLSL | [demo](https://demo.somanathkhadanga.com/odyssey) |
 | **Mercury** | Raymarched liquid-chrome metaballs, one fragment shader | R3F, GLSL | [demo](https://demo.somanathkhadanga.com/mercury) |

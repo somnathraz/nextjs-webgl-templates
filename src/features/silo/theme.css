@@ -1,0 +1,722 @@
+.silo {
+  --paper: #f2f3ef;
+  --ink: #232623;
+  --red: #d93828;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  overflow: clip;
+}
+.silo * {
+  box-sizing: border-box;
+}
+.silo a {
+  color: inherit;
+  text-decoration: none;
+}
+.silo button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+.silo a:focus-visible,
+.silo button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 6px;
+}
+.silo-skip {
+  position: fixed;
+  top: -100px;
+  background: white;
+  padding: 15px;
+  z-index: 50;
+}
+.silo-skip:focus {
+  top: 10px;
+}
+.silo-nav {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 4%;
+  border-bottom: 1px solid #d9dcd5;
+  position: relative;
+  z-index: 3;
+}
+.silo-logo {
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1;
+}
+.silo-logo span {
+  font-size: 14px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 5px;
+}
+.silo-nav nav {
+  display: flex;
+  gap: 36px;
+  font-size: 13px;
+}
+.silo-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+}
+.silo-nav a:hover {
+  opacity: 0.6;
+}
+.silo-hero {
+  height: calc(94svh - 96px);
+  min-height: 580px;
+  max-height: 1000px;
+  position: relative;
+  border-bottom: 1px solid #d9dcd5;
+}
+.silo-hero-heading {
+  position: absolute;
+  top: 35px;
+  left: 4%;
+  right: 4%;
+  pointer-events: none;
+}
+.silo-hero-heading p,
+.silo-index,
+.silo-hero-note,
+.silo-finish-label,
+.silo-footer-top > div > span,
+.silo-footer-bottom,
+.silo-detail-photo > span {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.silo-hero-heading h1 {
+  font-size: 220px;
+  font-weight: 800;
+  line-height: 0.9;
+  margin: 22px 0 0;
+}
+.silo-stage {
+  position: absolute;
+  inset: 0 0 0 20%;
+  touch-action: pan-y;
+}
+.silo-stage canvas {
+  display: block;
+}
+.silo-hero-copy {
+  position: absolute;
+  left: 4%;
+  bottom: 80px;
+  max-width: 300px;
+}
+.silo-hero-copy h2 {
+  font-size: 22px;
+  line-height: 1.35;
+  font-weight: 400;
+  margin: 20px 0 28px;
+}
+.silo-hero-copy a,
+.silo-closing > a {
+  display: inline-flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13px;
+  border-bottom: 1px solid;
+  padding: 0 0 10px;
+}
+.silo-hero-copy a:hover svg {
+  transform: translateY(4px);
+}
+.silo svg {
+  transition: transform 0.25s;
+}
+.silo-controls {
+  position: absolute;
+  right: 4%;
+  bottom: 70px;
+  width: 265px;
+}
+.silo-finish-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.silo-control-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.silo-swatches {
+  display: flex;
+  gap: 10px;
+}
+.silo-swatches button {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  border: 3px solid var(--paper);
+  outline: 1px solid transparent;
+}
+.silo-swatches button[aria-pressed='true'] {
+  outline-color: var(--ink);
+}
+.silo-control-divider {
+  height: 23px;
+  width: 1px;
+  background: #c6c9c2;
+  margin: 0 6px;
+}
+.silo-icon {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 36px;
+  background: none;
+  border: 0;
+}
+.silo-icon:hover {
+  background: #e2e5dd;
+}
+.silo-icon:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+.silo-hero-note {
+  position: absolute;
+  bottom: 22px;
+  left: 4%;
+  color: #697063;
+}
+.silo-loading {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 13px;
+}
+.silo-loading a {
+  display: flex;
+  gap: 10px;
+}
+.silo-intro {
+  padding: 100px 8%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 35px;
+}
+.silo-intro > .silo-index {
+  grid-column: 1/-1;
+}
+.silo-intro h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.14;
+  margin: 0;
+  grid-column: 1/-1;
+}
+.silo-intro h2 span {
+  color: #81877d;
+}
+.silo-intro > p {
+  grid-column: 2;
+  max-width: 470px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+.silo-detail-band {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: #e4e7df;
+}
+.silo-detail-photo {
+  min-height: 620px;
+  background: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85')
+    center/cover;
+  position: relative;
+}
+.silo-detail-photo > span {
+  position: absolute;
+  bottom: 26px;
+  left: 30px;
+  background: var(--paper);
+  padding: 8px 12px;
+}
+.silo-specs {
+  padding: 70px 12%;
+  align-self: center;
+}
+.silo-specs h2 {
+  font-size: 38px;
+  line-height: 1.15;
+  font-weight: 400;
+  margin: 35px 0 50px;
+}
+.silo-accordion {
+  border-top: 1px solid #bfc5b8;
+}
+.silo-accordion > button {
+  width: 100%;
+  padding: 23px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: 0;
+  text-align: left;
+  font-size: 14px;
+}
+.silo-accordion p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 0 0 25px;
+  color: #555e50;
+}
+.silo-specs small {
+  font-size: 10px;
+  line-height: 1.6;
+  display: block;
+  margin-top: 25px;
+  color: #666d60;
+}
+.silo-closing {
+  padding: 110px 8%;
+  text-align: center;
+}
+.silo-closing p {
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 35px 0;
+}
+.silo-closing em {
+  font-family: Georgia, serif;
+  font-weight: 400;
+}
+.silo-footer {
+  background: var(--red);
+  padding: 50px 4% 22px;
+  color: #231e1b;
+}
+.silo-footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+.silo-footer-top > div > a {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 18px;
+}
+.silo-footer-top small {
+  font-size: 10px;
+  display: block;
+  margin-top: 12px;
+}
+.silo-back {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #762a2080;
+  border-radius: 50%;
+}
+.silo-back:hover svg {
+  transform: translateY(-4px);
+}
+.silo-footer-wordmark {
+  font-size: 300px;
+  font-weight: 800;
+  line-height: 1;
+  margin: 40px 0 30px;
+  position: relative;
+}
+.silo-footer-wordmark > span {
+  font-size: 42px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 30px;
+}
+.silo-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  border-top: 1px solid #762a2080;
+  padding-top: 20px;
+}
+.silo-footer-bottom a {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+@media (min-width: 1500px) {
+  .silo-hero-heading h1 {
+    font-size: 280px;
+  }
+  .silo-stage {
+    inset: 0 5% 0 20%;
+  }
+  .silo-footer-wordmark {
+    font-size: 400px;
+  }
+}
+@media (max-width: 900px) {
+  .silo-hero-heading h1 {
+    font-size: 170px;
+  }
+  .silo-stage {
+    inset: 0 -10% 10% 10%;
+  }
+  .silo-hero-copy {
+    bottom: 55px;
+  }
+  .silo-hero-copy h2 {
+    font-size: 18px;
+  }
+  .silo-controls {
+    bottom: 55px;
+  }
+  .silo-specs {
+    padding: 45px 9%;
+  }
+  .silo-specs h2 {
+    font-size: 30px;
+  }
+  .silo-detail-photo {
+    min-height: 530px;
+  }
+}
+@media (max-width: 600px) {
+  .silo-nav {
+    height: 76px;
+    padding: 0 6%;
+  }
+  .silo-logo {
+    font-size: 37px;
+  }
+  .silo-nav nav {
+    gap: 18px;
+    font-size: 11px;
+  }
+  .silo-nav-link {
+    font-size: 0;
+    gap: 0;
+  }
+  .silo-nav-link svg {
+    width: 22px;
+    height: 22px;
+  }
+  .silo-hero {
+    height: calc(94svh - 76px);
+    min-height: 690px;
+    max-height: 900px;
+  }
+  .silo-hero-heading {
+    left: 6%;
+    top: 25px;
+  }
+  .silo-hero-heading p {
+    font-size: 9px;
+  }
+  .silo-hero-heading h1 {
+    font-size: 110px;
+    margin-top: 18px;
+  }
+  .silo-stage {
+    inset: 105px -8% 170px -8%;
+  }
+  .silo-hero-copy {
+    left: 6%;
+    bottom: 116px;
+  }
+  .silo-hero-copy > .silo-index {
+    font-size: 9px;
+  }
+  .silo-hero-copy h2 {
+    font-size: 17px;
+    margin: 9px 0 12px;
+  }
+  .silo-hero-copy a {
+    font-size: 11px;
+    padding-bottom: 5px;
+    gap: 14px;
+  }
+  .silo-controls {
+    left: 6%;
+    right: 6%;
+    bottom: 44px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  .silo-finish-label {
+    flex-direction: column;
+    gap: 4px;
+    margin: 0;
+    font-size: 9px;
+  }
+  .silo-control-row {
+    gap: 3px;
+  }
+  .silo-hero-note {
+    left: 6%;
+    bottom: 13px;
+    font-size: 8px;
+  }
+  .silo-intro {
+    padding: 65px 6%;
+    display: block;
+  }
+  .silo-intro h2 {
+    font-size: 34px;
+    margin: 25px 0;
+  }
+  .silo-intro > p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+  .silo-detail-band {
+    grid-template-columns: 1fr;
+  }
+  .silo-detail-photo {
+    min-height: 420px;
+  }
+  .silo-specs {
+    padding: 50px 6%;
+  }
+  .silo-specs h2 {
+    margin: 25px 0 35px;
+  }
+  .silo-closing {
+    padding: 75px 6%;
+  }
+  .silo-closing p {
+    font-size: 36px;
+  }
+  .silo-footer {
+    padding: 35px 6% 25px;
+  }
+  .silo-footer-top > div > a {
+    font-size: 23px;
+    gap: 12px;
+  }
+  .silo-footer-top > div > span {
+    font-size: 9px;
+  }
+  .silo-back {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+  .silo-footer-wordmark {
+    font-size: 170px;
+    margin: 45px 0 30px;
+  }
+  .silo-footer-wordmark > span {
+    font-size: 22px;
+    margin-top: 17px;
+  }
+  .silo-footer-bottom {
+    font-size: 8px;
+    flex-wrap: wrap;
+  }
+  .silo-footer-bottom > span:nth-child(2) {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .silo * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+.silo-balance {
+  height: 240svh;
+  position: relative;
+  background: #252923;
+  color: #f2f3ef;
+}
+.silo-balance-sticky {
+  position: sticky;
+  top: 0;
+  min-height: 640px;
+  height: 100svh;
+  padding: 45px 6%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.silo-balance-meta,
+.silo-balance-caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.silo-balance-caption {
+  font-size: 10px;
+}
+.silo-balance-composition {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  align-items: center;
+  gap: 7%;
+}
+.silo-balance h2 {
+  font-size: 52px;
+  font-weight: 400;
+  line-height: 1.22;
+  max-width: 700px;
+  margin: 0;
+}
+.silo-orbit-drawing {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  max-width: 370px;
+  margin: auto;
+}
+.silo-orbit-drawing > div {
+  position: absolute;
+  inset: 5%;
+  border: 1px solid #d5e4bd;
+  border-radius: 50%;
+}
+.silo-orbit-drawing > div:nth-child(2) {
+  transform: rotate(-35deg) scaleX(0.42);
+  border-width: 2px;
+}
+.silo-orbit-drawing > span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+}
+.silo-story-progress {
+  height: 3px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #d93828;
+  transform-origin: left;
+}
+.silo-moving-type {
+  padding: 30px 0;
+  overflow: hidden;
+  background: #d93828;
+}
+.silo-moving-type > div {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+  width: max-content;
+}
+.silo-moving-type span {
+  font-size: 72px;
+  line-height: 1.1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+.silo-moving-type svg {
+  height: 65px;
+  width: 65px;
+  flex-shrink: 0;
+}
+.silo-detail-photo {
+  overflow: hidden;
+  background: #b9bfb3;
+}
+.silo-photo-image {
+  position: absolute;
+  inset: -12% 0;
+  background: url('https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=85')
+    center/cover;
+}
+.silo-detail-photo > span {
+  z-index: 1;
+}
+.silo-footer-wordmark {
+  overflow: hidden;
+}
+.silo-footer-letter {
+  display: inline-block;
+}
+.silo-footer-wordmark sup {
+  font-size: 42px;
+  vertical-align: top;
+  display: inline-block;
+  margin-top: 30px;
+  line-height: 1;
+}
+.silo-closing > a:hover svg,
+.silo-footer-top > div > a:hover svg {
+  transform: translate(5px, -5px);
+}
+@media (max-width: 900px) {
+  .silo-balance h2 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 600px) {
+  .silo-balance {
+    height: 210svh;
+  }
+  .silo-balance-sticky {
+    min-height: 620px;
+    padding: 30px 6%;
+  }
+  .silo-balance-composition {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .silo-orbit-drawing {
+    width: 165px;
+  }
+  .silo-balance h2 {
+    font-size: 34px;
+  }
+  .silo-balance-caption {
+    font-size: 8px;
+  }
+  .silo-moving-type {
+    padding: 24px 0;
+  }
+  .silo-moving-type span {
+    font-size: 42px;
+  }
+  .silo-moving-type svg {
+    width: 36px;
+    height: 36px;
+  }
+  .silo-footer-wordmark sup {
+    font-size: 22px;
+    margin-top: 17px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .silo-balance {
+    height: auto;
+  }
+  .silo-balance-sticky {
+    position: relative;
+    height: auto;
+    min-height: 640px;
+  }
+}
